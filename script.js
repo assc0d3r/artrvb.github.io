@@ -5,7 +5,7 @@
  * ==========================================
  */
 const CONFIG = {
-  "owner": "nullcpy",
+  "owner": "assc0d3r",
   "repo": "rvb",
   "knownArchs": [
     "arm64-v8a", "arm64", "aarch64", "armeabi-v7a", "arm-v7a", "arm32", "arm", "x86_64", "x86", "universal", "all"
