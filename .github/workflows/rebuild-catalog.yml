@@ -38,7 +38,7 @@ jobs:
         # per-release build.json asset downloads entirely.
         run: git clone --depth 1 --branch website "https://github.com/$RVB_REPO.git" rvb-website
         env:
-          RVB_REPO: nullcpy/rvb
+          RVB_REPO: assc0d3r/ARTRVB
 
       - name: Checkout rvb naming rules (filename parsing source of truth)
         # rebuild_catalog.py imports normalize_key/normalize_arch/extract_arch/
@@ -53,11 +53,11 @@ jobs:
           git -C rvb-code checkout main
           test -f rvb-code/.github/scripts/naming.py
         env:
-          RVB_REPO: nullcpy/rvb
+          RVB_REPO: assc0d3r/ARTRVB
 
       - name: Rebuild data.json from website branch manifests
         env:
-          RVB_REPO: nullcpy/rvb
+          RVB_REPO: assc0d3r/ARTRVB
           RVB_NAMING_DIR: ${{ github.workspace }}/rvb-code/.github/scripts
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # available by default; gh reads this implicitly
         run: |
