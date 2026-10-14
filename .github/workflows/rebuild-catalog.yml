@@ -58,6 +58,7 @@ jobs:
       - name: Rebuild data.json from website branch manifests
         env:
           RVB_REPO: assc0d3r/ARTRVB
+          MIN_RELEASES_THRESHOLD: "1"
           RVB_NAMING_DIR: ${{ github.workspace }}/rvb-code/.github/scripts
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # available by default; gh reads this implicitly
         run: |
